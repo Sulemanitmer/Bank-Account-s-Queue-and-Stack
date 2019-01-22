@@ -1,0 +1,83 @@
+// Suleman Itmer
+
+public class Account_Itmer 
+{
+	// Main Var
+	protected String accountNumber;
+	protected String customerFirstName ;
+	protected String customerLastName ;
+	protected double address ;
+	protected double balance;
+	
+	//----------------------------------------------------->
+	//New Accounts 
+	public void Account(String accountNum, String firstName, String lastName, double location, double money)
+	{
+		accountNumber = accountNum;
+		customerFirstName = firstName;
+		customerLastName = lastName;
+		address = location; 
+		balance = money;
+	}
+	
+	//----------------------------------------------------->
+	//printers
+	public String openAccount()
+	{
+	return	"\n" + "Account Name: " + customerFirstName + ", " + customerLastName + 
+			"\n" + "Account Number: " + accountNumber + 
+			"\n" + "Current Balance: "  + balance ;
+	}
+	
+	public void checkBalance()
+	{
+		System.out.println("Account Name: " + customerFirstName + ", " + customerLastName +
+				"\n" + "Account Number: " + accountNumber +
+				"\n" + "Current Balance: " + balance);
+	  
+	}
+	public void deposit(double amount)
+	{
+		balance+=amount;
+		System.out.println("Account Name: " + customerFirstName + ", " + customerLastName +
+				"\n" + "Account Number: " + accountNumber +
+				"\n" + "Deposit Amount: " + amount +
+				"\n" + "New Balance: " + balance);
+	}
+	public void withdraw(double amount)
+	{
+			balance-=amount;
+			System.out.println("Account Name: " + customerFirstName + ", " + customerLastName +
+					"\n" + "Account Number: " + accountNumber +
+					"\n" + "Withdrawn Amount: " + amount +
+					"\n" + "New Balance: " + balance);
+	
+	}
+	public void printMonthlyStatement()
+	{
+		System.out.println("Account Name: " + customerFirstName + ", " + customerLastName +
+			"\n" + "Account Number: " + accountNumber +
+	        "\n" + "End Balance: "+ balance);
+	}
+	
+	//----------------------------------------------------->
+	//making a new copy
+	public Account_Itmer deepCopy()
+	{
+		Account_Itmer clone = new Account_Itmer();
+		clone.accountNumber = this.accountNumber;
+		clone.customerFirstName = this.customerFirstName;
+		clone.customerLastName = this.customerLastName;
+		clone.address = this.address; 
+		clone.balance = this.balance;
+		return clone;
+	}
+	
+	//----------------------------------------------------->
+	//comparing keys
+	public int compareTo(String targetKey)
+	{
+		return (customerFirstName.compareTo(targetKey));
+	}
+
+}
