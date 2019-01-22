@@ -1,0 +1,89 @@
+// Suleman Itmer
+
+public class Account_Queue 
+{
+	private Account_Itmer[]data;
+	private int size;
+	private int numOfNodes, front , rear;
+	
+	public Account_Queue ()
+	{
+		size = 100;
+		numOfNodes = 0;
+		front = 0;
+		rear = 0 ;
+		data = new Account_Itmer[100];	
+	}
+	
+	public void Queue( int n )
+	{
+		size = n;
+		numOfNodes = 0;
+		front = 0;
+		rear = 0;
+		data = new Account_Itmer [n];
+	}
+	
+	public boolean enque (Account_Itmer newNode)
+	{
+		if ( numOfNodes == size )
+		{
+			System.out.println("\n" + "Insert Account failed");
+			return false;
+		}
+		else 
+		{
+			numOfNodes = numOfNodes + 1;
+			data [rear ] = newNode.deepCopy();
+			rear = ( rear + 1) % size;
+			System.out.println("\n" + "Insert Account success");
+			return true;	
+		}
+	}
+	
+
+	public Account_Itmer deque()
+	{
+		int frontLocation;
+		if (numOfNodes == 0)
+		{
+			System.out.println("\n" + "Delete failed");
+			return null;
+		}
+		else 
+		{
+			frontLocation = front;
+			front = ( front + 1) %size;
+			numOfNodes = numOfNodes - 1;
+			System.out.println("\n" + "Delete successfully");
+			return data[frontLocation];
+		}
+	}
+	
+	//----------------------------------------------------->
+	// checking input without delteting it.
+	public void FIFOpeek()
+	{
+		
+		if (numOfNodes == 0)
+		{
+			System.out.println("\n" + "Queue is empty");
+		}
+		else 
+		{
+			System.out.println(data[front].openAccount());
+		}
+	}
+	//----------------------------------------------------->
+	//displaying everything in the array.
+	public void showAll()
+	{
+		int i = front;
+		for (int c = 1; c <= numOfNodes; c++)
+		{
+			System.out.println(data[i].openAccount());
+			i = ( i + 1) % size;
+		}
+	}
+
+}
