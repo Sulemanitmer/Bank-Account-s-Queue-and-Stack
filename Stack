@@ -1,0 +1,82 @@
+// Suleman Itmer
+public class Account_Stack 
+{
+	private Account_Itmer[]data;
+	private int top;
+	private int size;
+	
+	public Account_Stack ()
+	{
+		top = -1;
+		size = 100;
+		data = new Account_Itmer[100];	
+	}
+	
+	public Account_Stack( int n )
+	{
+		top = -1;
+		size = n;
+		data = new Account_Itmer [n];
+	}
+	
+	public boolean push (Account_Itmer newNode)
+	{
+		if ( top == size -1 )
+		{
+			System.out.println("\n" + "Insert Account failed");
+			return false;
+		}
+		else 
+		{
+			top = top + 1;
+			data [top] = newNode.deepCopy();
+			System.out.println("\n" + "Insert Account success");
+			return true;
+		}
+	}
+	
+	public Account_Itmer pop()
+	{
+		int topLocation;
+		if (top == -1)
+		{
+			System.out.println("\n" + "Delete failed");
+			return null;
+		}
+		else 
+		{
+			topLocation = top;
+			top = ( top - 1);
+			System.out.println("\n" + "Delete successfully");
+			return data[topLocation];
+		}
+	}
+	
+	//----------------------------------------------------->
+	// checking input without delteting it.
+	public void FILOpeek()
+	{
+		int topLocation;
+		if (top == -1)
+		{
+			System.out.println("\n" + "Stack is empty");
+		}
+		else 
+		{
+			topLocation = top;
+			System.out.println(data[topLocation].openAccount());
+		}
+	}
+	
+	//----------------------------------------------------->
+	//displaying everything in the array.
+	public void showAll()
+	{
+		for (int i = top; i >= 0; i--)
+		{
+			System.out.println(data[i].openAccount());
+		}
+		
+	}
+
+}
