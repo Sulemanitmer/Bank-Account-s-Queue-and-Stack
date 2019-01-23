@@ -1,6 +1,8 @@
 # Queue-and-Stack
 Incorporating Queue and Stack to my Bank Account
 
+Understanding Queue and Stack
+
 # Bank Accounts
 There will be two types of Bank Accounts: 
 Saving Account and Checking Account
