@@ -1,7 +1,12 @@
 # Queue-and-Stack
 Incorporating Queue and Stack to my Bank Account
 
-Understanding Queue and Stack
+This code will put my bank accounts into a Queue or Stack
+
+Purpose of this code is to help me understand how Queue and Stack works.
+
+Projected Completed
+
 
 # Bank Accounts
 There will be two types of Bank Accounts: 
@@ -13,6 +18,6 @@ By using polymorphism I will be able to call the Saving and Checkings methods fr
 Will hold the info in the Stack Structure or Queue
 
 # Structure 
-Will be the main method which will let the user create an account and put that account into a queue or a stack
+Will be the main method which will let the user create an account and put that account into a queue or  stack
 
 # Executable from Eclipse
