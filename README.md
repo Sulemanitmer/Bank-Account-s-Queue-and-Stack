@@ -15,7 +15,7 @@ Saving Account and Checking Account
 By using polymorphism I will be able to call the Saving and Checkings methods from Bank Accounts. 
 
 # Account Stack and Queue
-Will hold the info in the Stack Structure or Queue
+Will hold the info to make a stack or Queue
 
 # Structure 
 Will be the main method which will let the user create an account and put that account into a queue or  stack
