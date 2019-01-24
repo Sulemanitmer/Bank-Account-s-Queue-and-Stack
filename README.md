@@ -18,6 +18,6 @@ By using polymorphism I will be able to call the Saving and Checkings methods fr
 Will hold the info to make a stack or Queue
 
 # Structure 
-Will be the main method which will let the user create an account and put that account into a queue or  stack
+Will be the main method which will let the user create an account and put that account into a queue or stack. (based on what the user picks).
 
 # Executable from Eclipse
